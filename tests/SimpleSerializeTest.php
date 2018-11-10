@@ -63,7 +63,9 @@ class SimpleSerializeTest extends TestCase
      */
     public function it_doesnt_break_when_key_or_value_contains_colon()
     {
-        $string = 'time:12:23;foo:value:bar';
+        // TODO: Handle edge cases
+        // $string = 'time:12:23;foo:value:bar;test:c;ete;;fas:s';
+        $string = 'time:12:23;foo:value:bar;';
 
         $this->assertEquals(
             [
