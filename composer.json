@@ -1,0 +1,26 @@
+{
+    "name": "swiftmade/simple-serialize",
+    "description": "Basic key:value; style serialization with string support only.",
+    "type": "library",
+    "require": {
+        "php": ">=5.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~6.0"
+    },
+    "autoload": {
+        "files": [
+            "src/functions.php"
+        ],
+        "psr-4": {
+            "Swiftmade\\SimpleSerialize\\": "src/"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ahmet Özışık",
+            "email": "ozisikahmet@gmail.com"
+        }
+    ]
+}
