@@ -15,6 +15,9 @@ final class Serializer
         $keyValues = [];
 
         foreach ($this->array as $key => $value) {
+            if (strpos($key, ':') !== false) {
+                throw new SerializerException('Invalid colon (:) at key: ' . $key);
+            }
             $keyValues[] = $key . ':' . $value;
         }
 

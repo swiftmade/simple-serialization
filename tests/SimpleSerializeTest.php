@@ -26,6 +26,19 @@ class SimpleSerializeTest extends TestCase
     /**
      * @test
      */
+    public function keys_cannot_contain_colons()
+    {
+        $array = [
+            'key:containing_colon' => 'value'
+        ];
+
+        $this->expectException(\Swiftmade\SimpleSerialize\SerializerException::class);
+        simple_serialize($array);
+    }
+
+    /**
+     * @test
+     */
     public function it_unserializes_strings_into_associative_array()
     {
         $string = 'banana:yellow;apple:red;orange:orange;pineapple:yellow;plum:purple';
