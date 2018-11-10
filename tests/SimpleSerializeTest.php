@@ -40,6 +40,9 @@ class SimpleSerializeTest extends TestCase
             ],
             simple_unserialize($string)
         );
+
+        $string = simple_unserialize('test:trailing semicolon;');
+        $this->assertEquals(['test' => 'trailing semicolon'], $string);
     }
 
     /**
